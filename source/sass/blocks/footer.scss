@@ -1,0 +1,275 @@
+.footer {
+  min-height: 199px;
+  background-color: $color-default-white;
+  border-top: 1px solid rgba($color-elephant, 0.3);
+}
+
+.footer__wrapper {
+  padding: 31px 0 0 0;
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1199 {
+    padding: 45px 0 40px 0;
+  }
+
+  @include vp-767 {
+    padding: 30px 0;
+  }
+}
+
+.footer__nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.footer__nav {
+  width: 54%;
+  padding-top: 19px;
+  margin-left: -6px;
+
+  @include vp-1365 {
+    width: 57%;
+  }
+
+  @include vp-1279 {
+    width: 61%;
+  }
+
+  @include vp-1199 {
+    width: 79%;
+    padding-top: 0;
+  }
+
+  @include vp-767 {
+    min-width: 100%;
+    padding: 9px 10px 10px 5px;
+  }
+}
+
+.footer__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  max-width: 700px;
+
+  @include vp-1199 {
+    column-gap: 2.6%;
+    max-width: 700px;
+    margin-left: 57px;
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5px;
+    column-gap: 34px;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+@include vp-767 {
+  .footer__nav-item--tours {
+    order: -1;
+  }
+
+  .footer__nav-item--study {
+    order: 3;
+  }
+
+  .footer__nav-item--about {
+    order: 4;
+  }
+
+  .footer__nav-item--reviews {
+    order: 2;
+  }
+
+  .footer__nav-item--gallery {
+    order: 3;
+  }
+
+  .footer__nav-item--contacts {
+    order: 4;
+  }
+}
+
+.footer__nav-link {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 2px 4px;
+
+  &:hover {
+    border-bottom: 1px solid $color-elephant;
+  }
+
+  &:focus {
+    outline: 1px solid $color-elephant;
+  }
+
+  &.is-disabled {
+    color: rgba($color-elephant, 0.5);
+    pointer-events: none;
+  }
+
+  @include vp-1199 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.footer__logo svg {
+  fill: $color-elephant;
+
+  @include vp-1199 {
+    width: 119px;
+    height: 34px;
+  }
+}
+
+.footer__logo:hover svg,
+.footer__logo:focus svg {
+  fill: $color-resolution-blue;
+}
+
+.footer__logo:active svg {
+  fill: $color-navy-blue;
+}
+
+.footer__logo.is-disabled svg {
+  fill: rgba($color-navy-blue, 0.1);
+  pointer-events: none;
+}
+
+.footer__logo.is-disabled {
+  pointer-events: none;
+}
+
+.footer__phone {
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 19px;
+
+  &:hover {
+    color: $color-resolution-blue;
+  }
+
+  &:focus {
+    color: $color-resolution-blue;
+  }
+
+  &:active {
+    color: $color-navy-blue;
+  }
+
+  &.is-disabled {
+    color: rgba($color-navy-blue, 0.1);
+    pointer-events: none;
+  }
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.footer__social-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 auto;
+  padding-top: 8px;
+
+  @include vp-1199 {
+    padding-top: 30px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    padding-left: 6px;
+  }
+}
+
+.footer__social-link {
+  display: block;
+  width: 29px;
+  height: 29px;
+  padding: 5px;
+  border: 1px solid rgba($color-elephant, 0.3);
+
+  &--ok {
+    padding-left: 6px;
+  }
+
+  &--reddit {
+    padding-left: 7px;
+  }
+
+  &:hover {
+    border: 1px solid $color-elephant;
+  }
+
+  &:focus {
+    border: 1px solid $color-elephant;
+  }
+
+  &:active {
+    background-color: $color-navy-blue;
+    border: none;
+  }
+
+  &.is-disabled {
+    border: 1px solid rgba($color-elephant, 0.25);
+    pointer-events: none;
+  }
+}
+
+.footer__social-link:active svg {
+  fill: $color-default-white;
+}
+
+.footer__social-link.is-disabled svg {
+  fill: rgba($color-elephant, 0.25);
+}
+
+.footer__policy a {
+  font-size: 12px;
+  line-height: 12px;
+  display: block;
+  text-align: center;
+  padding: 2px 4px;
+  margin: 0 auto;
+  margin-top: 2px;
+  max-width: 210px;
+
+  &:hover {
+    border-bottom: 1px solid $color-elephant;
+  }
+
+  &:focus {
+    outline: 1px solid $color-elephant;
+  }
+
+  &.is-disabled {
+    color: rgba($color-elephant, 0.5);
+    pointer-events: none;
+  }
+
+  @include vp-767 {
+    text-align: left;
+    padding-left: 4px;
+    margin: 0;
+    padding-top: 4px;
+  }
+}

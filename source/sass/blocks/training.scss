@@ -1,0 +1,470 @@
+.training {
+  min-height: 861px;
+  border-bottom: 1px solid rgba($color-elephant, 0.2);
+
+  @include vp-1199 {
+    border-bottom: none;
+  }
+}
+
+.training__wrapper {
+  padding: 55px 0 17px 0;
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1199 {
+    padding: 41px 0 17px 0;
+  }
+
+  @include vp-767 {
+    padding: 36px 0 17px 0;
+  }
+}
+
+.training__title {
+  position: relative;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  margin: 0;
+  margin-bottom: 14px;
+
+  &::after {
+    position: absolute;
+    content: attr(data-shadow);
+    font-size: 55px;
+    left: 0;
+    bottom: 9px;
+    color: $color-elephant;
+    opacity: 0.03;
+  }
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 3px;
+
+    &::after {
+      font-size: 40px;
+      left: 2px;
+      bottom: 6px;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.training__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1px;
+  z-index: 1;
+}
+
+.training__description {
+  width: 70%;
+  margin-bottom: 51px;
+  z-index: 1;
+
+  @include vp-1199 {
+    width: 79%;
+    max-width: 560px;
+    line-height: 24px;
+    margin-bottom: 59px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    margin-bottom: 38px;
+  }
+}
+
+.training__list-title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  margin: 0;
+  padding-top: 8px;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 16px;
+    padding-top: 10px;
+  }
+}
+
+
+.training__button {
+  width: 37px;
+  height: 35px;
+  background-color: $color-navy-blue;
+  color: $color-default-white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-default-white;
+    outline: 1px solid $color-resolution-blue;
+  }
+
+  &:focus {
+    background-color: $color-default-white;
+    border: 1px solid $color-resolution-blue;
+  }
+
+  &:active {
+    background-color: $color-resolution-blue;
+  }
+
+  &:disabled {
+    background-color: rgba($color-navy-blue, 0.1);
+    pointer-events: none;
+  }
+}
+
+.training__button svg {
+  fill: $color-default-white;
+}
+
+.training__button:hover svg,
+.training__button:focus svg {
+  fill: $color-resolution-blue;
+}
+
+.training__button:active svg {
+  fill: $color-default-white;
+}
+
+.training__slider {
+  width: 100%;
+  padding: 34px 0;
+
+  @include vp-1199 {
+    padding-top: 23px;
+  }
+
+  @include vp-767 {
+    padding: 23px 0 29px 0;
+  }
+}
+
+.training__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.training__item {
+  padding: 18px 18px 20px 18px;
+  border: 1px solid var(--white-100, $color-default-white);
+  background: var(--white-100, $color-default-white);
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
+  min-height: 377px;
+
+  @include vp-1199 {
+    min-width: 206px;
+    min-height: 411px;
+    padding: 15px 15px 15px 15px;
+  }
+
+  @include vp-767 {
+    padding: 20px 20px 11px 20px;
+    min-height: 385px;
+  }
+}
+
+.training__image {
+  display: block;
+  background-color: $color-for-background;
+  min-width: 238px;
+  min-height: 212px;
+
+  @include vp-1199 {
+    width: 100%;
+    min-height: 212px;
+    min-width: 176px;
+  }
+}
+
+.training__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.training__item-title h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  width: 60%;
+  margin: 0;
+  padding-top: 2px;
+}
+
+.training__item-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 13px;
+
+  @include vp-767 {
+    width: 95.5%;
+  }
+}
+
+.training__link svg {
+  width: 14px;
+  height: 8px;
+}
+
+.training__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding-left: 4px;
+  cursor: pointer;
+  border: 1px solid rgba($color-elephant, 0.1);
+}
+
+.training__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
+  margin-top: 12px;
+
+  @include vp-1199 {
+    line-height: 18px;
+  }
+}
+
+.training__features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include vp-1199 {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 59px;
+    column-gap: 28px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    padding-left: 25px;
+    gap: 25px;
+    padding-top: 4px;
+  }
+}
+
+.training__features-title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  margin: 0;
+  padding-top: 16px;
+  margin-bottom: 24px;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 18px;
+    padding-top: 9px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 16px;
+    padding-left: 4px;
+  }
+}
+
+.training__features-item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: $color-navy-blue;
+    border-radius: 50%;
+    bottom: -27px;
+  }
+
+  @include vp-1199 {
+    &--pine-tree {
+      order: 1;
+    }
+  }
+
+  @include vp-767 {
+    &--pine-tree {
+      order: 0;
+    }
+  }
+}
+
+.training__features-item--map,
+.training__features-item--boots,
+.training__features-item--pine-tree,
+.training__features-item--mountain {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: $color-navy-blue;
+    border-radius: 50%;
+    bottom: -27px;
+  }
+
+  @include vp-1199 {
+    &::before {
+      bottom: -10px;
+    }
+  }
+
+  @include vp-767 {
+    &::before {
+      width: 13px;
+      height: 13px;
+      bottom: 9px;
+      left: -21px;
+    }
+  }
+}
+
+.training__features-item--pine-tree,
+.training__features-item--mountain {
+  @include vp-1199 {
+    &::before {
+      bottom: 70px;
+    }
+  }
+
+  @include vp-767 {
+    &::before {
+      bottom: 9px;
+    }
+  }
+}
+
+.training__features-item--map {
+  @include vp-1199 {
+    &::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      background-color: rgba($color-elephant, 0.1);
+      left: 0;
+      right: -30px;
+      bottom: -3px;
+    }
+  }
+
+  @include vp-767 {
+    &::after {
+      width: 1px;
+      height: 183px;
+      top: 20px;
+      left: -15px;
+    }
+  }
+}
+
+.training__features-item--mountain {
+  @include vp-1199 {
+    &::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      background-color: rgba($color-elephant, 0.1);
+      left: 0;
+      right: -30px;
+      top: -3px;
+    }
+  }
+
+  @include vp-767 {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.training__features-item--boots {
+  @include vp-1199 {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      background-color: rgba($color-elephant, 0.1);
+      bottom: -63px;
+      left: 6px;
+      height: 60px;
+    }
+  }
+
+  @include vp-767 {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.training__features-item p {
+  padding-left: 41px;
+
+  @include vp-1199 {
+    font-size: 14px;
+    line-height: 22px;
+    width: 80%;
+    max-width: 330px;
+    margin-top: 17px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    width: 89%;
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 283px;
+  }
+}
+
+.training__features-item svg {
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 28px;
+  left: -8px;
+
+  @include vp-1199 {
+    top: 26px;
+    left: -7px;
+  }
+
+  @include vp-767 {
+    width: 19px;
+    height: 19px;
+    top: 8px;
+    left: 12px;
+  }
+}

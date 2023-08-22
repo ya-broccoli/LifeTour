@@ -1,0 +1,225 @@
+.reviews__wrapper {
+  padding: 39px 0 79px;
+
+  @include vp-1199 {
+    padding: 26px 0 30px;
+  }
+
+  @include vp-767 {
+    padding: 11px 0 30px;
+  }
+}
+
+.reviews__title {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  margin: 0;
+  color: $color-elephant;
+  padding-top: 13px;
+
+  &::after {
+    position: absolute;
+    content: attr(data-shadow);
+    bottom: 0;
+    left: 0;
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 55px;
+    opacity: 0.03;
+  }
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+    padding-top: 15px;
+    padding-left: 3px;
+
+    &::after {
+      font-size: 40px;
+      top: -5px;
+      left: 1px;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+    padding-top: 10px;
+    padding-left: 1px;
+
+    &::after {
+      font-size: 26px;
+    }
+  }
+}
+
+.reviews__header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 27px;
+  z-index: 1;
+
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
+}
+
+.reviews__button {
+  width: 37px;
+  height: 35px;
+  background-color: $color-navy-blue;
+  color: $color-default-white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-default-white;
+    outline: 1px solid $color-resolution-blue;
+  }
+
+  &:focus {
+    background-color: $color-default-white;
+    border: 1px solid $color-resolution-blue;
+  }
+
+  &:active {
+    background-color: $color-resolution-blue;
+  }
+
+  &:disabled {
+    background-color: rgba($color-navy-blue, 0.1);
+    pointer-events: none;
+  }
+}
+
+
+.reviews__button svg {
+  fill: $color-default-white;
+}
+
+.reviews__button:hover svg,
+.reviews__button:focus svg {
+  fill: $color-resolution-blue;
+}
+
+.reviews__button:active svg {
+  fill: $color-default-white;
+}
+
+.reviews__slider {
+  overflow: visible;
+}
+
+.reviews__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.reviews__item {
+  padding: 20px 40px 20px 20px;
+  max-width: 790px;
+  display: flex;
+  gap: 30px;
+  border: 0 solid var(--white-100, $color-default-white);
+  background: var(--white-100, $color-default-white);
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
+
+  @include vp-1199 {
+    max-width: 560px;
+    padding: 20px 20px 17px 22px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 21px 20px 16px;
+    gap: 16px;
+    height: 100%;
+  }
+}
+
+.reviews__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviews__image {
+  width: 100%;
+  margin: 0 auto;
+  min-width: 258px;
+  height: 253px;
+  background-color: $color-for-background;
+
+  @include vp-1199 {
+    min-width: 186px;
+    height: 237px;
+  }
+
+  @include vp-767 {
+    min-width: 250px;
+    height: 169px;
+  }
+}
+
+.reviews__text {
+  padding: 14px 0 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include vp-1199 {
+    padding: 3px 0 26px 0;
+  }
+
+  @include vp-767 {
+    padding: 3px 0 14px;
+  }
+}
+
+.reviews__text p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.reviews__autor h3 {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 13px;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 13px;
+    letter-spacing: -0.7px;
+  }
+}
+
+.reviews__autor span {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+.reviews__autor--ivan {
+  padding-top: 21px;
+
+  @include vp-767 {
+    padding-top: 1px;
+  }
+}

@@ -6,6 +6,7 @@
   min-height: 100vh;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
+  overflow: hidden;
 
   .header,
   .footer {
@@ -66,6 +67,6 @@
   transition: none !important;
 }
 
-.js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
-}
+// .js-focus-visible :focus:not(.focus-visible) {
+//   outline: none;
+// }
