@@ -3475,7 +3475,7 @@ button,
 .contacts__link {
   padding-top: 3px;
 }
-.contacts__link--adress {
+.contacts__link--address {
   cursor: default;
 }
 @media (max-width: 1199px) {
@@ -3489,7 +3489,7 @@ button,
     line-height: 21px;
     margin-top: 7px;
   }
-  .contacts__link--adress {
+  .contacts__link--address {
     padding-right: 69px;
   }
 }
