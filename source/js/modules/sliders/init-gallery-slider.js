@@ -1,5 +1,3 @@
-import {iosChecker} from '../../utils/ios-checker';
-
 const gallerySlider = document.querySelector('.gallery__slider');
 const buttonPrev = document.querySelector('.gallery__button--prev');
 const buttonNext = document.querySelector('.gallery__button--next');
@@ -15,7 +13,6 @@ const initGallerysSlider = () => {
       },
 
       loop: false,
-      allowTouchMove: iosChecker(),
       direction: 'horizontal',
     });
   }

@@ -12,7 +12,6 @@ const createAdvantagessSlider = () => {
       },
 
       loop: true,
-      allowTouchMove: false,
       direction: 'horizontal',
 
       breakpoints: {

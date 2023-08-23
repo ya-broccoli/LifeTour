@@ -152,17 +152,14 @@
   width: 100%;
   margin: 0 auto;
   min-width: 258px;
-  height: 253px;
   background-color: $color-for-background;
 
   @include vp-1199 {
     min-width: 186px;
-    height: 237px;
   }
 
   @include vp-767 {
     min-width: 250px;
-    height: 169px;
   }
 }
 

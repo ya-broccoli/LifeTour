@@ -39,6 +39,7 @@
   border: 1px solid $color-default-white;
   background-color: rgba($color-default-white, 0.2);
   padding: 16px 16px 16px 21px;
+  cursor: pointer;
 
   @include vp-1199 {
     top: 40.3%;

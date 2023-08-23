@@ -12,7 +12,6 @@ const initTrainigSlider = () => {
       },
 
       loop: false,
-      allowTouchMove: false,
       direction: 'horizontal',
 
       breakpoints: {

@@ -109,10 +109,7 @@
 
 .contacts__item {
   position: relative;
-  display: grid;
-  grid-template-columns: 26px 1fr;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 30px;
+  padding-left: 56px;
 
   @include vp-1199 {
     column-gap: 10px;
@@ -127,26 +124,28 @@
 }
 
 .contacts__item-icon {
-  grid-row: 1/3;
-  margin-top: 15px;
+  position: absolute;
+  left: 0;
+  top: 12px;
 
-  @include vp-1199 {
-    margin-top: 2px;
-  }
+  // @include vp-1199 {
+  //   margin-top: 2px;
+  // }
 
-  @include vp-767 {
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    left: 0;
-    top: -2px;
-  }
+  // @include vp-767 {
+  //   width: 22px;
+  //   height: 22px;
+  //   position: absolute;
+  //   left: 0;
+  //   top: -2px;
+  // }
 }
 
 .contacts__item-title {
   font-size: 18px;
   font-weight: 600;
   margin: 0;
+  margin-bottom: 8px;
 
   @include vp-1199 {
     font-size: 16px;
@@ -180,9 +179,25 @@
   }
 }
 
+.contacts__link--phone,
+.contacts__link--email {
+  &:hover {
+    color: $color-resolution-blue;
+  }
+
+  &:focus {
+    color: $color-resolution-blue;
+  }
+
+  &:active {
+    color: $color-navy-blue;
+  }
+}
+
 .contacts__map {
   margin-top: 75px;
   width: 100%;
+  height: 324px;
   background-color: $color-for-background;
 
   @include vp-1199 {

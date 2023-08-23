@@ -238,6 +238,28 @@
   padding-left: 4px;
   cursor: pointer;
   border: 1px solid rgba($color-elephant, 0.1);
+
+  &:hover {
+    border: 1px solid $color-elephant;
+  }
+
+  &:focus {
+    border: 1px solid $color-elephant;
+  }
+
+  &:active {
+    background-color: $color-navy-blue;
+    border: none;
+  }
+
+  &.is-disabled {
+    border: 1px solid rgba($color-elephant, 0.25);
+    pointer-events: none;
+  }
+}
+
+.training__link:active svg {
+  fill: $color-default-white;
 }
 
 .training__text {
@@ -257,8 +279,9 @@
   margin: 0;
   padding: 0;
   gap: 30px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 
   @include vp-1199 {
     grid-template-columns: repeat(2, 1fr);
@@ -297,6 +320,7 @@
 
 .training__features-item {
   position: relative;
+  max-width: 277px;
 
   &::before {
     position: absolute;

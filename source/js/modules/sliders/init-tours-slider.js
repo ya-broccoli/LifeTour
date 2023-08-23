@@ -12,7 +12,6 @@ const initToursSlider = () => {
       },
 
       loop: false,
-      allowTouchMove: false,
       direction: 'horizontal',
 
       breakpoints: {

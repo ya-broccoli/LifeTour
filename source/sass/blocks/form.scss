@@ -28,9 +28,10 @@
   min-width: 341px;
   padding: 22px 30px;
   display: block;
+  border: none;
 
   &:hover {
-    outline: 1px solid $color-navy-blue;
+    outline: 2px solid $color-navy-blue;
 
     &::placeholder {
       color: $color-navy-blue;
@@ -39,7 +40,7 @@
 
   &:focus,
   &:active {
-    outline: 1px solid $color-resolution-blue;
+    outline: 2px solid $color-resolution-blue;
 
     &::placeholder {
       color: $color-transparent;
@@ -69,6 +70,8 @@
   background-color: $color-navy-blue;
   color: $color-default-white;
   user-select: none;
+  cursor: pointer;
+  border: none;
 
   &:hover,
   &:focus {

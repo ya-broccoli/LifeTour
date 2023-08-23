@@ -12,7 +12,6 @@ const initReviewsSlider = () => {
       },
 
       loop: false,
-      allowTouchMove: false,
       direction: 'horizontal',
 
       breakpoints: {
