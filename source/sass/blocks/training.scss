@@ -13,7 +13,7 @@
   flex-direction: column;
 
   @include vp-1199 {
-    padding: 41px 0 17px 0;
+    padding: 39px 0 17px 0;
   }
 
   @include vp-767 {
@@ -110,21 +110,20 @@
   height: 35px;
   background-color: $color-navy-blue;
   color: $color-default-white;
-  border: none;
+  outline: none;
+  border: 1px solid $color-transparent;
   cursor: pointer;
 
-  &:hover {
-    background-color: $color-default-white;
-    outline: 1px solid $color-resolution-blue;
-  }
-
+  &:hover,
   &:focus {
+    color: $color-resolution-blue;
     background-color: $color-default-white;
-    border: 1px solid $color-resolution-blue;
+    border-color: $color-resolution-blue;
   }
 
   &:active {
     background-color: $color-resolution-blue;
+    color: $color-default-white;
   }
 
   &:disabled {
@@ -171,17 +170,19 @@
   border: 1px solid var(--white-100, $color-default-white);
   background: var(--white-100, $color-default-white);
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
-  min-height: 377px;
+  height: 377px;
 
   @include vp-1199 {
     min-width: 206px;
     min-height: 411px;
+    height: auto;
     padding: 15px 15px 15px 15px;
   }
 
   @include vp-767 {
     padding: 20px 20px 11px 20px;
     min-height: 385px;
+    height: auto;
   }
 }
 
@@ -274,19 +275,30 @@
   }
 }
 
+.training__features {
+  @include vp-1199 {
+    width: 681px;
+  }
+
+  @include vp-767 {
+    width: auto;
+  }
+}
+
 .training__features-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 30px;
+  gap: 33px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   align-items: flex-end;
 
   @include vp-1199 {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 59px;
-    column-gap: 28px;
+    column-gap: 29px;
   }
 
   @include vp-767 {
@@ -320,7 +332,7 @@
 
 .training__features-item {
   position: relative;
-  max-width: 277px;
+  max-width: 275px;
 
   &::before {
     position: absolute;
@@ -333,6 +345,8 @@
   }
 
   @include vp-1199 {
+    max-width: 300px;
+
     &--pine-tree {
       order: 1;
     }
@@ -398,7 +412,7 @@
       height: 1px;
       background-color: rgba($color-elephant, 0.1);
       left: 0;
-      right: -30px;
+      right: -57px;
       bottom: -3px;
     }
   }
@@ -421,7 +435,7 @@
       height: 1px;
       background-color: rgba($color-elephant, 0.1);
       left: 0;
-      right: -30px;
+      right: -57px;
       top: -3px;
     }
   }
@@ -459,8 +473,7 @@
   @include vp-1199 {
     font-size: 14px;
     line-height: 22px;
-    width: 80%;
-    max-width: 330px;
+    width: 270px;
     margin-top: 17px;
   }
 

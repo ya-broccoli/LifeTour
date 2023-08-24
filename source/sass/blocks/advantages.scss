@@ -181,21 +181,20 @@
   height: 35px;
   background-color: $color-navy-blue;
   color: $color-default-white;
-  border: none;
+  outline: none;
+  border: 1px solid $color-transparent;
   cursor: pointer;
 
-  &:hover {
-    background-color: $color-default-white;
-    outline: 1px solid $color-resolution-blue;
-  }
-
+  &:hover,
   &:focus {
+    color: $color-resolution-blue;
     background-color: $color-default-white;
-    border: 1px solid $color-resolution-blue;
+    border-color: $color-resolution-blue;
   }
 
   &:active {
     background-color: $color-resolution-blue;
+    color: $color-default-white;
   }
 
   &:disabled {
