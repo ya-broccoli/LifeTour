@@ -12,6 +12,7 @@ const initHeroSlider = () => {
 
       slidesPerView: 1,
       spaceBetween: 0,
+      speed: 500,
       allowTouchMove: true,
       breakpoints: {
         1200: {

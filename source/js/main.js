@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initNavToggles} from './modules/nav-toggles/init-nav-toggles';
-import {initVideo} from './modules/video/init-video';
+import {initVideo} from './modules/hero/init-video';
 import {initToursSlider} from './modules/sliders/init-tours-slider.js';
 import {initTrainigSlider} from './modules/sliders/init-training-slider';
 import {initReviewsSlider} from './modules/sliders/init-reviews-slider';
@@ -10,6 +10,7 @@ import {initAdvantagesSlider} from './modules/sliders/init-advantages-slider';
 import {initGallerysSlider} from './modules/sliders/init-gallery-slider';
 import {initHeroSlider} from './modules/sliders/init-hero-slider';
 import {initLeaflet} from './modules/leaflet/init-leaflet';
+import {getHeight} from './modules/hero/indent.js';
 
 // ---------------------------------
 
@@ -39,6 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initAdvantagesSlider();
     initGallerysSlider();
     initLeaflet();
+    getHeight();
   });
 });
 

@@ -1,14 +1,14 @@
 .hero {
   margin-top: -150px;
   background-color: $color-for-background;
-  min-height: 800px;
 
   @include vp-1199 {
-    min-height: 1064px;
+    min-height: 1024px;
   }
 
   @include vp-767 {
-    min-height: 628px;
+    margin-top: -86px;
+    min-height: 568px;
   }
 }
 
@@ -17,17 +17,16 @@
   min-height: 800px;
 
   @include vp-1199 {
-    min-height: 1064px;
+    min-height: 1024px;
   }
 
   @include vp-767 {
-    min-height: 628px;
+    min-height: 568px;
   }
 }
 
 .hero__background {
   position: absolute;
-  // inset: 0;
   z-index: -2;
   width: 100%;
   height: 100%;
@@ -64,7 +63,7 @@
   padding: 0;
 
   @include vp-1199 {
-    height: 1064px;
+    height: 1024px;
   }
 
   @include vp-767 {
@@ -86,7 +85,7 @@
     width: 100%;
     max-width: 650px;
     margin-bottom: 14px;
-    padding-top: 70px;
+    padding-top: 56px;
 
     &--altai {
       width: 100%;
@@ -94,6 +93,11 @@
       max-width: 750px;
       margin: 0 auto;
       margin-bottom: 15px;
+      padding-top: 22px;
+    }
+
+    &--kamchatka {
+      padding-top: 22px;
     }
   }
 
@@ -101,9 +105,11 @@
     font-size: 30px;
     line-height: 30px;
     max-width: 435px;
+    padding-top: 41px;
 
     &--altai {
       min-width: auto;
+      padding-top: 130px;
     }
   }
 }
@@ -111,6 +117,7 @@
 .hero__item {
   display: flex;
   background-size: cover;
+  height: auto;
 
   @include vp-1199 {
     display: flex;
@@ -125,7 +132,7 @@
   }
 
   @include vp-767 {
-    padding: 49px 0;
+    padding: 0;
   }
 }
 
@@ -141,6 +148,10 @@
   padding-top: 142px;
   z-index: 1;
 
+  @include vp-1279 {
+    max-width: 1180px;
+  }
+
   @include vp-1199 {
     display: flex;
     flex-direction: column;
@@ -151,7 +162,6 @@
 
   @include vp-767 {
     width: 100%;
-    margin-top: 80px;
     padding-top: 0;
   }
 }
@@ -159,11 +169,20 @@
 .hero__text {
   z-index: 1;
   max-width: 851px;
-  margin: 40px -71px 0 0;
+  margin: 32px -71px 0 0;
   grid-area: 1/1/2/2;
 
   &--altai {
     max-width: 925px;
+    margin: 40px -71px 0 0;
+  }
+
+  &--kamchatka {
+    margin: 40px -71px 0 0;
+  }
+
+  @include vp-1279 {
+    margin: 40px -87px 0 0;
   }
 
   @include vp-1199 {
@@ -173,6 +192,12 @@
 
     &--altai {
       width: 100%;
+    }
+  }
+
+  @include vp-767 {
+    &--kamchatka {
+      padding-top: 90px;
     }
   }
 }
@@ -187,6 +212,10 @@
     width: 60%;
     max-width: 464px;
     margin-bottom: 36px;
+  }
+
+  &--altai {
+    margin-bottom: 37px;
   }
 
   @include vp-1199 {
@@ -274,9 +303,8 @@
 }
 
 .hero__video {
-  margin: 159px 0 0;
+  margin: 152px 0 0;
   grid-area: 1/2/4/3;
-  // width: 100%;
   align-self: start;
   justify-self: end;
 
@@ -336,6 +364,7 @@
   @include vp-1199 {
     top: 530px;
     right: calc(50% - 221px);
+    margin-top: -40px;
   }
 
   @include vp-767 {

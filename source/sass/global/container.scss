@@ -4,6 +4,10 @@
   margin: 0 auto;
   padding: 0 5px;
 
+  @include vp-1279 {
+    max-width: 1180px;
+  }
+
   @include vp-1199 {
     padding: 0 43px;
   }
